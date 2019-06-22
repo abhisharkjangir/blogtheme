@@ -15,7 +15,7 @@ import Loadable from "react-loadable";
 
 // Our store, entrypoint, and manifest
 import createStore from "../src/store";
-import App from "../src/app";
+import App from "../src/app/containers/app";
 import manifest from "../build/asset-manifest.json";
 import { Routes } from "../src/app/routes";
 import rootSaga from "../src/rootSagas";

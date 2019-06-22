@@ -2,13 +2,13 @@ import { LOGO } from "../assets/imgs";
 
 export default {
   default: {
-    title: "Meuzic",
-    description: "www.meuzic.com",
+    title: "Blog Theme",
+    description: "Bloging Website",
     image: LOGO,
     twitter: "",
-    sep: " | ",
+    sep: " : ",
     siteURL: "",
-    keywords:"",
+    keywords: "",
     facebookAppId: "XXXXXXXXX",
     updated: new Date().toDateString(),
     published: new Date().toDateString(),
@@ -16,23 +16,8 @@ export default {
   },
   home: {
     id: "home",
-    title: "Dashboard",
-    description: "Dashboard"
-  },
-  login: {
-    id: "login",
-    title: "Login",
-    description: "Login to Meuzic"
-  },
-  signup: {
-    id: "signup",
-    title: "Signup",
-    description: "Signup on Meuzic"
-  },
-  forgetpassword: {
-    id: "forgotpassword",
-    title: "Forget Password",
-    description: "Forget Password"
+    title: "Home",
+    description: "Blog Theme"
   },
   notfound: {
     id: "notfound",

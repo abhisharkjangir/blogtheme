@@ -1,12 +1,16 @@
 import { combineReducers } from "redux-immutable";
 
 // App & Category Reducer
-import { APP_STATE_KEY, CATEGORY_STATE_KEY } from "./app/appConstants";
-import AppReducer, { categoryReducer } from "./app/appReducer";
+import {
+  APP_STATE_KEY,
+  CATEGORY_STATE_KEY
+} from "./app/containers/app/appConstants";
+import AppReducer, { categoryReducer } from "./app/containers/app/appReducer";
 
 // Home Reducer
-import { HOME_STATE_KEY } from "./app/routes/home/HomeConstants";
-import HomeReducer from "./app/routes/home/HomeReducer";
+
+import { HOME_STATE_KEY } from "./app/containers/pages/home/homeConstants";
+import HomeReducer from "./app/containers/pages/home/homeReducer";
 
 // Loader Reducer
 import { LOADER_STATE_KEY } from "./app/components/common/loader/loaderConstants";

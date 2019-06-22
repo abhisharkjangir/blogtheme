@@ -1,16 +1,17 @@
-import { connect } from "react-redux";
-import Header from "./header";
-import { setAppData } from "../../appActions";
-import { createStructuredSelector } from "reselect";
+import React from "react";
+import "./header.scss";
+import { Container } from "../layout";
+import logo from "../../assets/imgs/logo.png";
+class Header extends React.PureComponent {
+  render() {
+    return (
+      <header className="header">
+        <Container>
+          <img src={logo} width="105px" alt="logo" />
+        </Container>
+      </header>
+    );
+  }
+}
 
-const mapStateToProps = createStructuredSelector({
-  });
-
-const mapDispatchToProps = dispatch => ({
-  setAppData: data => dispatch(setAppData(data)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header);
+export default Header;

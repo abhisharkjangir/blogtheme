@@ -1,15 +1,17 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Loadable from "react-loadable";
-import { fetchCategory } from "../appActions";
+import { fetchCategory } from "../containers/app/appActions";
 
 const Home = Loadable({
-  loader: () => import(/* webpackChunkName: "home" */ "./home"),
+  loader: () =>
+    import(/* webpackChunkName: "home" */ "../containers/pages/home"),
   loading: () => null
 });
 
 const NotFound = Loadable({
-  loader: () => import(/* webpackChunkName: "notfound" */ "./notfound"),
+  loader: () =>
+    import(/* webpackChunkName: "notfound" */ "../containers/pages/notfound"),
   loading: () => null
 });
 
@@ -17,10 +19,10 @@ export const Routes = [
   {
     path: "/",
     component: Home,
-    fetchRouteData: [fetchCategory]
+    fetchRouteData: [fetchCategory],
+    exact: true
   },
   {
-    path: "/not-found",
     component: NotFound
   }
 ];

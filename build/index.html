@@ -9,13 +9,13 @@
     <meta name="theme-color" content="#1d1d1d" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="shortcut icon" href="/favicon.png" />
-    <title>Dashboard</title>
+    <title>Blog Theme</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
       rel="stylesheet"
     />
     <link href="/static/css/5.eb6ff360.chunk.css" rel="stylesheet" />
-    <link href="/static/css/main.f9125fac.chunk.css" rel="stylesheet" />
+    <link href="/static/css/main.d1a16a87.chunk.css" rel="stylesheet" />
   </head>
   <body>
     <noscript></noscript>
@@ -24,21 +24,21 @@
       !(function(c) {
         function e(e) {
           for (
-            var t, r, n = e[0], o = e[1], a = e[2], u = 0, i = [];
-            u < n.length;
-            u++
+            var t, r, n = e[0], o = e[1], u = e[2], a = 0, i = [];
+            a < n.length;
+            a++
           )
-            (r = n[u]), d[r] && i.push(d[r][0]), (d[r] = 0);
+            (r = n[a]), d[r] && i.push(d[r][0]), (d[r] = 0);
           for (t in o)
             Object.prototype.hasOwnProperty.call(o, t) && (c[t] = o[t]);
           for (h && h(e); i.length; ) i.shift()();
-          return f.push.apply(f, a || []), l();
+          return f.push.apply(f, u || []), l();
         }
         function l() {
           for (var e, t = 0; t < f.length; t++) {
             for (var r = f[t], n = !0, o = 1; o < r.length; o++) {
-              var a = r[o];
-              0 !== d[a] && (n = !1);
+              var u = r[o];
+              0 !== d[u] && (n = !1);
             }
             n && (f.splice(t--, 1), (e = p((p.s = r[0]))));
           }
@@ -66,26 +66,26 @@
                         "static/css/" +
                         ({ 1: "home", 3: "notfound" }[f] || f) +
                         "." +
-                        { 0: "31d6cfe0", 1: "aac06269", 3: "d629a118" }[f] +
+                        { 0: "31d6cfe0", 1: "4f9110e2", 3: "e4433d23" }[f] +
                         ".chunk.css",
                       o = p.p + t,
                       r = document.getElementsByTagName("link"),
-                      a = 0;
-                    a < r.length;
-                    a++
+                      u = 0;
+                    u < r.length;
+                    u++
                   ) {
-                    var u =
-                      (c = r[a]).getAttribute("data-href") ||
+                    var a =
+                      (c = r[u]).getAttribute("data-href") ||
                       c.getAttribute("href");
-                    if ("stylesheet" === c.rel && (u === t || u === o))
+                    if ("stylesheet" === c.rel && (a === t || a === o))
                       return e();
                   }
                   var i = document.getElementsByTagName("style");
-                  for (a = 0; a < i.length; a++) {
+                  for (u = 0; u < i.length; u++) {
                     var c;
                     if (
-                      (u = (c = i[a]).getAttribute("data-href")) === t ||
-                      u === o
+                      (a = (c = i[u]).getAttribute("data-href")) === t ||
+                      a === o
                     )
                       return e();
                   }
@@ -118,19 +118,19 @@
               });
               e.push((r[2] = t));
               var n,
-                a = document.createElement("script");
-              (a.charset = "utf-8"),
-                (a.timeout = 120),
-                p.nc && a.setAttribute("nonce", p.nc),
-                (a.src =
+                u = document.createElement("script");
+              (u.charset = "utf-8"),
+                (u.timeout = 120),
+                p.nc && u.setAttribute("nonce", p.nc),
+                (u.src =
                   p.p +
                   "static/js/" +
                   ({ 1: "home", 3: "notfound" }[f] || f) +
                   "." +
-                  { 0: "fc86b2e1", 1: "508700df", 3: "390eb2bd" }[f] +
+                  { 0: "99051e84", 1: "dd6115c0", 3: "709e40cf" }[f] +
                   ".chunk.js"),
                 (n = function(e) {
-                  (a.onerror = a.onload = null), clearTimeout(u);
+                  (u.onerror = u.onload = null), clearTimeout(a);
                   var t = d[f];
                   if (0 !== t) {
                     if (t) {
@@ -150,10 +150,10 @@
                     d[f] = void 0;
                   }
                 });
-              var u = setTimeout(function() {
-                n({ type: "timeout", target: a });
+              var a = setTimeout(function() {
+                n({ type: "timeout", target: u });
               }, 12e4);
-              (a.onerror = a.onload = n), document.head.appendChild(a);
+              (u.onerror = u.onload = n), document.head.appendChild(u);
             }
           return Promise.all(e);
         }),
@@ -213,7 +213,7 @@
         var h = n;
         l();
       })([]);</script
-    ><script src="/static/js/5.0681be22.chunk.js"></script
-    ><script src="/static/js/main.c2100fbf.chunk.js"></script>
+    ><script src="/static/js/5.09eec64c.chunk.js"></script
+    ><script src="/static/js/main.58a3cc2a.chunk.js"></script>
   </body>
 </html>
