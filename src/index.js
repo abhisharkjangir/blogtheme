@@ -3,12 +3,11 @@ import React from "react";
 import { render, hydrate } from "react-dom";
 import { Provider } from "react-redux";
 import Loadable from "react-loadable";
-import { Frontload } from "react-frontload";
 import { Router } from "react-router-dom";
 import createStore from "./store";
 import * as serviceWorker from "./serviceWorker";
-import 'react-quill/dist/quill.snow.css';
-import 'react-toastify/dist/ReactToastify.min.css';
+import "react-quill/dist/quill.snow.css";
+import "react-toastify/dist/ReactToastify.min.css";
 import "./app/styles/main.scss";
 import App from "./app";
 import rootSaga from "./rootSagas";
@@ -27,9 +26,7 @@ store.runSaga(rootSaga);
 const Application = (
   <Provider store={store}>
     <Router history={history}>
-      <Frontload noServerRender={true}>
-        <App />
-      </Frontload>
+      <App />
     </Router>
   </Provider>
 );

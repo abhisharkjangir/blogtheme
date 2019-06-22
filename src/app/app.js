@@ -8,6 +8,13 @@ import Loader from "./components/common/loader";
 import ErrorBoundary from "./components/errorBoundary";
 
 class App extends Component {
+  componentDidMount() {
+    const { categoryIsFetching, categoryList, fetchCategory } = this.props;
+    if (!categoryIsFetching && categoryList.length === 0) {
+      fetchCategory();
+    }
+  }
+
   render() {
     return (
       <ErrorBoundary>

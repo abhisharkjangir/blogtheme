@@ -32,6 +32,7 @@
     "md5-file": "^4.0.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.19.1",
     "query-string": "^6.4.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -48,9 +49,9 @@
     "react-toastify": "^5.0.1",
     "redux": "^4.0.0",
     "redux-immutable": "3.0.8",
-    "redux-saga": "^1.0.2",
     "redux-thunk": "^2.3.0",
-    "reselect": "^2.5.4"
+    "reselect": "^2.5.4",
+    "redux-saga": "0.15.6"
   },
   "scripts": {
     "start-app": "react-scripts start",
@@ -66,7 +67,7 @@
     "build:prod": "set REACT_APP_ENV=prod&& npm run build-app",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "cross-env NODE_ENV=production node ./server/index.js",
+    "serve": "cross-env NODE_ENV=production nodemon ./server/index.js",
     "deploy": "npm run build:prod&& npm run serve"
   },
   "browserslist": [
