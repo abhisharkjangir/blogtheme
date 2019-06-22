@@ -1,0 +1,10 @@
+@import '../../../styles/theme';
+
+a {
+  font-size: var(--font-size-12);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

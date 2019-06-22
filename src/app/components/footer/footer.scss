@@ -1,0 +1,18 @@
+@import "../../styles/theme";
+
+.footer {
+  height: 55px;
+  width: 100%;
+  margin-left: 250px;
+  border-top: 1px solid var(--color-grey);
+  padding: 17px 15px;
+  font-size: 13px;
+}
+
+.footer-no-sidebar {
+  height: 55px;
+  width: 100%;
+  border-top: 1px solid var(--color-grey);
+  padding: 17px 15px;
+  font-size: 13px;
+}

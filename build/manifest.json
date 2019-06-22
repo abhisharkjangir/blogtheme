@@ -1,0 +1,16 @@
+{
+  "short_name": "imabhi",
+  "name": ".",
+  "description": "2.0",
+  "icons": [
+    {
+      "src": "https://s3.ap-south-1.amazonaws.com/imabhi.in/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "http://abhijangir.me/",
+  "display": "fullscreen",
+  "theme_color": "#ff005a",
+  "background_color": "#ffffff"
+}

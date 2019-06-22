@@ -1,0 +1,21 @@
+@import "../../../styles/theme";
+
+input,
+input:focus,
+input:active {
+  outline: none !important;
+}
+
+input {
+  border-radius: 0;
+  width: 100%;
+  border: 1px solid var(--color-grey);
+  padding: 8px 10px;
+  font-size: var(--font-size-14);
+}
+
+label {
+  text-transform: uppercase;
+  font-size: var(--font-size-12);
+  padding: 0 10px;
+}

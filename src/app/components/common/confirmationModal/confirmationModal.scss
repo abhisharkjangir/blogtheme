@@ -1,0 +1,53 @@
+@import "../../../styles/theme";
+
+.styles_modal__gNwvD {
+  padding: 0;
+}
+
+.styles_overlay__CLSq- {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.confirmation-modal {
+  min-width: 300px;
+  max-width: 500px;
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 15px;
+    border: 0px;
+  }
+  .modal-header {
+    background-color: var(--color-grey);
+    border-radius: 0;
+  }
+
+  .modal-header {
+    font-size: var(--font-size-12);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .modal-body {
+    padding: 50px 15px;
+    text-align: center;
+    font-size: var(--font-size-14);
+  }
+  .modal-footer {
+    border-top: 1px solid var(--color-grey);
+  }
+}
+
+.transitionEnter {
+  transform: scale(0);
+}
+.transitionEnterActive {
+  transform: scale(1);
+  transition: transform 500ms ease;
+}
+.transitionExit {
+  transform: scale(1);
+}
+.transitionExitActive {
+  transform: scale(0);
+  transition: transform 00ms ease;
+}

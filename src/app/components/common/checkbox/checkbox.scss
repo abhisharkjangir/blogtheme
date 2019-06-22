@@ -1,0 +1,65 @@
+@import "../../../styles/theme";
+
+/* The container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  // font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  label {
+    padding: 0;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-size: var(--font-size-12);
+    display: block;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .checkmark {
+    border: 1px solid var(--color-z-black);
+  }
+
+  .checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--color-z-black);
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .checkmark:after {
+    left: 1px;
+    top: 1px;
+    background-color: var(--color-z-black);
+    width: 16px;
+    height: 16px;
+    border: solid var(--color-z-black);
+    border-width: 1px;
+    // -webkit-transform: rotate(45deg);
+    // transform: rotate(45deg);
+  }
+}

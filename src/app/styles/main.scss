@@ -1,0 +1,77 @@
+@import "bootstrap"; // Load Bootstrap
+@import "theme"; // Load Theme
+@import "simplelineicon"; // Load Simple Icon
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  background-color: var(--color-white);
+}
+
+// To remove outlines from Buttons, Inputs and Textarea
+input,
+input:focus,
+input:active,
+textarea,
+textarea:focus,
+textarea:active,
+button,
+button:focus,
+button:active {
+  outline: none !important;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  .main {
+    min-height: calc(100vh - 55px - 55px);
+    margin-top: 55px;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+// Scrollbar ==================
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-z-black);
+}
+
+
+// Font Sizes ==================
+.fs-12 {
+  font-size: var(--font-size-12);
+}
+.fs-14 {
+  font-size: var(--font-size-14);
+}
+.fs-16 {
+  font-size: var(--font-size-16);
+}
+.fs-18 {
+  font-size: var(--font-size-18);
+}
+.fs-18 {
+  font-size: var(--font-size-20);
+}

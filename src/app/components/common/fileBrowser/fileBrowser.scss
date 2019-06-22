@@ -1,0 +1,55 @@
+@import "../../../styles/theme";
+
+.file-browser {
+  p {
+    margin-top: 4px;
+    text-transform: uppercase;
+    font-size: var(--font-size-12);
+    padding: 0 10px;
+    margin-bottom: 0.5rem;
+  }
+  .custom-file {
+    z-index: 0;
+    input,
+    input:focus,
+    input:active,
+    button,
+    button:focus,
+    button:active {
+      outline: none !important;
+    }
+    border-radius: 0px;
+    .custom-file-input {
+      border-radius: 0px;
+    }
+    .custom-file-label {
+      padding-left: 0px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      height: 39px;
+      border-radius: 0px;
+      border: 1px solid var(--color-grey);
+      outline: none !important;
+      img {
+        height: 37px;
+        width: 37px;
+        overflow: hidden;
+        margin-top:-2px;
+      }
+      span {
+        padding-top: 10px;
+
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+    .custom-file-label::after {
+      padding-top: 10px;
+      content: "Choose File";
+      outline: none !important;
+      height: 38px;
+      border-radius: 0px;
+      background-color: var(--color-grey);
+    }
+  }
+}

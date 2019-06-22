@@ -1,0 +1,18 @@
+@import '../../../styles/theme';
+
+
+// Over Ride React Quill CSS ===========
+.quill {
+  font-family: "Varela Round", sans-serif;
+  .ql-toolbar {
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-grey)!important;
+  }
+  .ql-container {
+    border: 1px solid var(--color-grey)!important;
+    margin-top: -1px;
+  }
+  .ql-editor {
+    min-height: 250px;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../../styles/theme";
+
+select,
+select:focus,
+select:active {
+  outline: none !important;
+}
+
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-grey);
+  padding: 8px 10px;
+  font-size: var(--font-size-14);
+}

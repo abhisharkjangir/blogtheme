@@ -1,0 +1,28 @@
+@import "../../../styles/theme";
+
+button {
+  padding: 8px 10px;
+  font-size: var(--font-size-14);
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  // border:1px solid var(--color-grey);
+  border-radius: 2px;
+}
+
+.size-xs {
+  padding: 4px 5px;
+  font-size: var(--font-size-12);
+}
+
+.size-md {
+  padding: 8px 10px;
+  font-size: var(--font-size-14);
+}
+
+.size-lg {
+  padding: 12px 15px;
+  font-size: var(--font-size-16);
+}
