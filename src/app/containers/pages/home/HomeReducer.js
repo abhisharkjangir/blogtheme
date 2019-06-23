@@ -1,4 +1,4 @@
-import { HOME_SAVE_USERS } from "./HomeConstants";
+import { HOME_SAVE_USERS } from "./homeConstants";
 
 const initialState = { home: "HomePage" };
 

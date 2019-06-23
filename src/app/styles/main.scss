@@ -1,3 +1,5 @@
+@import "slick";
+@import "slicktheme";
 @import "bootstrap"; // Load Bootstrap
 @import "theme"; // Load Theme
 @import "simplelineicon"; // Load Simple Icon
@@ -23,6 +25,10 @@ button,
 button:focus,
 button:active {
   outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .content {
@@ -54,18 +60,21 @@ button:active {
 }
 
 // Font Sizes ==================
+.fs-10 {
+  font-size: var(--font-size-10) !important;
+}
 .fs-12 {
-  font-size: var(--font-size-12);
+  font-size: var(--font-size-12) !important;
 }
 .fs-14 {
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-14) !important;
 }
 .fs-16 {
-  font-size: var(--font-size-16);
+  font-size: var(--font-size-16) !important;
 }
 .fs-18 {
-  font-size: var(--font-size-18);
+  font-size: var(--font-size-18) !important;
 }
 .fs-18 {
-  font-size: var(--font-size-20);
+  font-size: var(--font-size-20) !important;
 }

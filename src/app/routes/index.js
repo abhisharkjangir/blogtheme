@@ -1,7 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Loadable from "react-loadable";
-import { fetchCategory } from "../containers/app/appActions";
+import {
+  fetchCategory,
+  fetchTrendingBlogs
+} from "../containers/app/appActions";
 
 const Home = Loadable({
   loader: () =>
@@ -19,7 +22,7 @@ export const Routes = [
   {
     path: "/",
     component: Home,
-    fetchRouteData: [fetchCategory],
+    fetchRouteData: [fetchCategory, fetchTrendingBlogs],
     exact: true
   },
   {

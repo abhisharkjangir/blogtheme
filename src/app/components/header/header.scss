@@ -17,4 +17,26 @@
       width: auto;
     }
   }
+
+  .navigation {
+    padding: 15px 0;
+    text-align: right;
+    ul {
+      padding-inline-start: 0px;
+      list-style: none;
+      margin-bottom: 0;
+      li {
+        display: inline;
+        margin-left: 15px;
+        a {
+          font-size: var(--font-size-14);
+          color: var(--color-black);
+          font-weight: 500;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }

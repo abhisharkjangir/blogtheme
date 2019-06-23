@@ -9,9 +9,19 @@ import ErrorBoundary from "../errorBoundary";
 
 class App extends Component {
   componentDidMount() {
-    const { categoryIsFetching, categoryList, fetchCategory } = this.props;
+    const {
+      categoryIsFetching,
+      categoryList,
+      fetchCategory,
+      fetchTrendingBlogs,
+      trendingBlogList,
+      trendingBlogsIsFetching
+    } = this.props;
     if (!categoryIsFetching && categoryList.length === 0) {
       fetchCategory();
+    }
+    if (!trendingBlogsIsFetching && trendingBlogList.length === 0) {
+      fetchTrendingBlogs();
     }
   }
 

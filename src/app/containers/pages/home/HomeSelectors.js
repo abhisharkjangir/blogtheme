@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import { HOME_STATE_KEY } from "./HomeConstants";
+import { HOME_STATE_KEY } from "./homeConstants";
 
 export const makeSelectHomeState = state => {
   return state[HOME_STATE_KEY];

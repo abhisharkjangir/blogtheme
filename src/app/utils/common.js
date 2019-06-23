@@ -67,3 +67,48 @@ export const cleanObject = object => {
   }
   return cleanObject;
 };
+
+// Get Category Data from Blog
+export const getCategoryDataFromBlog = (categories, blog) => {
+  if (blog && categories) {
+    const blogFirstCategory = blog.category[0];
+    const matchedCategories = categories.filter(
+      cat => cat._id.toString() === blogFirstCategory
+    );
+    if (matchedCategories.length > 0) {
+      return matchedCategories[0];
+    }
+    return {};
+  }
+  return {};
+};
+
+// Get Blog URL
+export const getBlogUrl = blog => {
+  if (blog) {
+    return `blog/${blog.title
+      .toLowerCase()
+      .split(" ")
+      .join("-")}/${blog._id}`;
+  }
+  return "";
+};
+
+// Get Category URL
+export const getCategoryUrl = category => {
+  if (category && category.name) {
+    return `category/${category.name
+      .toLowerCase()
+      .split(" ")
+      .join("-")}/${category._id}`;
+  }
+  return "";
+};
+
+// Get Time String
+export const getTimeString = date => {
+  if (date) {
+    return "Calculate Date";
+  }
+  return "Time is not Available";
+};
