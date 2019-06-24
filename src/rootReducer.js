@@ -12,8 +12,8 @@ import AppReducer, {
 } from "./app/containers/app/appReducer";
 
 // Home Reducer
-import { HOME_STATE_KEY } from "./app/containers/pages/home/homeConstants";
-import HomeReducer from "./app/containers/pages/home/homeReducer";
+import { HOME_STATE_KEY } from "./app/containers/pages/home/HomeConstants";
+import HomeReducer from "./app/containers/pages/home/HomeReducer";
 
 // Loader Reducer
 import { LOADER_STATE_KEY } from "./app/components/common/loader/loaderConstants";

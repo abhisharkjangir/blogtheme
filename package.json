@@ -1,17 +1,17 @@
 {
-  "name": "dash",
+  "name": "blogtheme",
   "version": "1.0.0",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/abhisharkjangir/dash"
+    "url": "https://github.com/abhisharkjangir/blogtheme"
   },
   "author": {
     "name": "Abhishar Jangir",
     "email": "abhisharjangir@ymail.com",
     "url": "http://abhijangir.me/"
   },
-  "homepage": "http://dash.abhijangir.me",
+  "homepage": "http://blog.abhijangir.me",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
