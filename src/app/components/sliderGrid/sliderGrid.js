@@ -93,7 +93,7 @@ class SliderGrid extends React.PureComponent {
             trendingBlogList
               .slice(5, length)
               .map(blog => (
-                <SmallBlogCard blog={blog} categories={categoryList} />
+                <SmallBlogCard blog={blog} showCategory categories={categoryList} />
               ))}
         </SlickSlider>
       </div>

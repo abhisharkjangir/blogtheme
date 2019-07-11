@@ -5,7 +5,9 @@ import { Container, Col, Row } from "../../layout";
 import Meta from "../../../constants/meta";
 import SliderGrid from "../../../containers/sliderGrid";
 import TodaysSpotlight from "../../../containers/todaysSpotlight";
+import TopCategories from "../../../containers/topcategories";
 class Home extends React.PureComponent {
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,7 +21,12 @@ class Home extends React.PureComponent {
             <SliderGrid />
             <Row>
               <Col lg={9}>
-                <TodaysSpotlight />
+                <TodaysSpotlight slickSetting={{ dots: false, slidesToShow: 3, slidesToScroll: 3}}/>
+                <TopCategories />
+              </Col>
+              <Col lg={3} />
+              <Col lg={9}>
+
               </Col>
             </Row>
           </Container>

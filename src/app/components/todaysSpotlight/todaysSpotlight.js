@@ -1,17 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./todaysSpotlight.scss";
-import {
-  getCategoryDataFromBlog,
-  getCategoryUrl,
-  getBlogUrl,
-  getTimeString
-} from "../../utils/common";
+import { getBlogUrl, getTimeString } from "../../utils/common";
 import BorderHeading from "../borderHeading/borderHeading";
 import SlickSlider from "../slider/slider";
 import Image from "../common/Image/image";
 import Icon from "../icon/icon";
-import { REACT } from "../../assets/imgs";
 
 class TodaysSpotlight extends React.PureComponent {
   renderSkeleton = () => {
@@ -32,15 +26,17 @@ class TodaysSpotlight extends React.PureComponent {
   };
 
   render() {
-    const { trendingBlogsIsFetching, trendingBlogList } = this.props;
+    const {
+      trendingBlogsIsFetching,
+      trendingBlogList,
+      slickSetting
+    } = this.props;
     if (trendingBlogsIsFetching && trendingBlogList.length === 0)
       return this.renderSkeleton();
     return (
       <div className="todays-spotlight">
         <BorderHeading text="Today's Spotlight" />
-        <SlickSlider
-          merge={{ dots: false, slidesToShow: 3, slidesToScroll: 3 }}
-        >
+        <SlickSlider merge={{ ...slickSetting }}>
           {trendingBlogList &&
             trendingBlogList.map(blog => (
               <div key={blog._id} className="medium-blog-card">
