@@ -48,7 +48,7 @@ class Header extends React.PureComponent {
 
   renderNavigation = () => {
     return (
-      <Col lg={5}>
+      <Col lg={10}>
         <div className="navigation">
           <ul>
             {NAVIGATION.map(nav => (
@@ -69,7 +69,7 @@ class Header extends React.PureComponent {
           <Row>
             {this.renderLogo()}
             {this.renderNavigation()}
-            {this.renderTypehead()}
+            {/* {this.renderTypehead()} */}
           </Row>
         </Container>
       </header>
