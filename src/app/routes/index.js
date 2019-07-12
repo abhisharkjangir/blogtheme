@@ -9,13 +9,15 @@ import {
 const Home = Loadable({
   loader: () =>
     import(/* webpackChunkName: "home" */ "../containers/pages/home"),
-  loading: () => null
+  loading: () => null,
+  modules: ["home"]
 });
 
 const NotFound = Loadable({
   loader: () =>
     import(/* webpackChunkName: "notfound" */ "../containers/pages/notfound"),
-  loading: () => null
+  loading: () => null,
+  modules: ["notfound"]
 });
 
 export const Routes = [
