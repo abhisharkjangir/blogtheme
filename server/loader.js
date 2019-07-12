@@ -159,8 +159,6 @@ function loader(req, res) {
                   !asset.includes(".css.map")
                 );
               });
-              console.log("162", filteredAssets, chunks);
-
               return filteredAssets.map(k => assets[k]);
             };
 
