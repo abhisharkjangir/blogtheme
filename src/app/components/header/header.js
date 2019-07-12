@@ -5,6 +5,7 @@ import "./header.scss";
 import { Container, Col, Row } from "../layout";
 import logo from "../../assets/imgs/logo.png";
 import Typehead from "../typehead/typehead";
+import Image from "../common/Image/image";
 
 const NAVIGATION = [
   {
@@ -33,7 +34,7 @@ class Header extends React.PureComponent {
   renderLogo = () => {
     return (
       <Col lg={2}>
-        <img src={logo} width="105px" alt="logo" />
+        <Image src={logo} width="105px" alt="logo" />
       </Col>
     );
   };

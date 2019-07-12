@@ -11,13 +11,14 @@ import {
   getBlogUrl,
   getCategoryUrl
 } from "../../utils/common";
+import Image from "../common/Image/image";
 
 class SliderGrid extends React.PureComponent {
   renderSmallTile = blog => {
     const category = getCategoryDataFromBlog(this.props.categoryList, blog);
     return (
       <div key={blog._id} className="blog-card">
-        <img src={blog.imageSrc} alt={blog.title} />
+        <Image src={blog.imageSrc} alt={blog.title} />
         <div className="blog-content">
           <Link to={getCategoryUrl(category)} className="tag">
             {category.name}
@@ -32,14 +33,14 @@ class SliderGrid extends React.PureComponent {
     const category = getCategoryDataFromBlog(this.props.categoryList, blog);
     return (
       <div key={blog._id} className="blog-card full">
-        <img src={blog.imageSrc} alt={blog.title} />
+        <Image src={blog.imageSrc} alt={blog.title} />
         <div className="blog-content">
           <Link to={getCategoryUrl(category)} className="tag">
             {category.name}
           </Link>
           <Link to={getBlogUrl(blog)}>{blog.title}</Link>
           <div className="blog-detail">
-            <img
+            <Image
               src="https://secure.gravatar.com/avatar/f88c13d62ba761a92211e266c22dbb1f?s=56&d=mm&r=g"
               className="mr-3"
               alt={blog.author}
@@ -78,6 +79,14 @@ class SliderGrid extends React.PureComponent {
                 .slice(3, 5)
                 .map(tile => <div key={tile} className="blog-card" />)}
           </Col>
+          <Col className="p-0" lg={12}>
+            <SlickSlider>
+            {tiles &&
+              tiles
+                .slice(0, 4)
+                .map(tile => <div key={tile} className="small-skeleton-card" />)}
+            </SlickSlider>
+          </Col>
         </Row>
       </div>
     );
@@ -88,7 +97,7 @@ class SliderGrid extends React.PureComponent {
     const length = trendingBlogList.length;
     return (
       <div className="mt-4 mb-4 pl-1 pr-1">
-        <SlickSlider merge={{ dots: false, slidesToShow: 3, autoplay: true }}>
+        <SlickSlider merge={{ dots: false, autoplay: true }}>
           {trendingBlogList &&
             trendingBlogList
               .slice(5, length)

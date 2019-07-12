@@ -1,6 +1,7 @@
 import React from "react";
 import "./fileBrowser.scss";
 import Wrapper from "../wrapper";
+import Image from "../Image/image";
 
 class FileBrowser extends React.PureComponent {
   constructor() {
@@ -63,7 +64,7 @@ class FileBrowser extends React.PureComponent {
               accept={accept}
             />
             <label className="custom-file-label" htmlFor={id}>
-              {imageUrl !== "" ? <img src={imageUrl} alt="" /> : null}
+              {imageUrl !== "" ? <Image src={imageUrl} alt="" /> : null}
               <span>
                 {selectedImage && selectedImage !== ""
                   ? selectedImage.name
