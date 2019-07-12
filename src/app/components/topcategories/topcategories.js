@@ -1,33 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./topcategories.scss";
-import { getBlogUrl, getTimeString } from "../../utils/common";
 import BorderHeading from "../borderHeading/borderHeading";
-
-import Image from "../common/Image/image";
-import Icon from "../icon/icon";
 import { Row, Col } from "../layout";
 import SmallBlogCard from "../smallBlogCard";
-
-const LargeBlogCard = ({ blog }) => {
-  return (
-    <article key={blog._id} className="large-blog-card">
-      <Image src={blog.imageSrc} alt={blog.title} />
-      <Link to={getBlogUrl(blog)} className="title">
-        {blog.title}
-      </Link>
-      <p className="detail text-muted">
-        {blog.author}, {getTimeString(blog.createdDate)}
-        <span className="mr-1 ml-2 border-right" />
-        <Icon name="clock" className="mr-1 ml-1" /> 3 min read
-      </p>
-      <p className="description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet,
-        nunc et accumsan cursus, neque eros sodales lectus, in fermentum…
-      </p>
-    </article>
-  );
-};
+import SlickSlider from "../slider/slider";
+import LargeBlogCard from "../largeBlogCard/largeBlogCard";
+import FullImgBlogCard from "../fullmgBlogCard/fullmgBlogCard";
 
 class TopCategories extends React.PureComponent {
   renderSkeleton = () => {
@@ -37,14 +15,19 @@ class TopCategories extends React.PureComponent {
         <BorderHeading text="Top Categories" />
         <Row>
           {cards.slice(0, 2).map(blog => (
-            <Col className="p-0" lg={6}>
+            <Col key={blog} className="p-0" lg={6}>
               <div className="large-skeleton-card" />
             </Col>
           ))}
 
           {cards.slice(0, 6).map(blog => (
-            <Col className="p-0" lg={6}>
+            <Col key={blog} className="p-0" lg={6}>
               <div className="small-skeleton-card" />
+            </Col>
+          ))}
+          {cards.slice(0, 1).map(blog => (
+            <Col key={blog} className="p-0" lg={12}>
+              <div className="full-img-skeleton-card" />
             </Col>
           ))}
         </Row>
@@ -66,14 +49,21 @@ class TopCategories extends React.PureComponent {
         <Row className="m-0 p-0">
           {trendingBlogList.slice(0, 2).map(blog => (
             <Col className="p-0" lg={6}>
-              <LargeBlogCard blog={blog} />
+              <LargeBlogCard blog={blog} showDescription />
             </Col>
           ))}
-          {trendingBlogList.slice(3, trendingBlogList.length).map(blog => (
+          {trendingBlogList.slice(3, 7).map(blog => (
             <Col className="p-0" lg={6}>
               <SmallBlogCard blog={blog} showDetail categories={categoryList} />
             </Col>
           ))}
+          <Col lg={12} className="p-0">
+            <SlickSlider merge={{ dots: false, slidesToShow: 1, slidesToScroll: 1}}>
+              {trendingBlogList.slice(8, trendingBlogList.length).map(blog => (
+                <FullImgBlogCard blog={blog} categories={categoryList} showAuthor/>
+              ))}
+            </SlickSlider>
+          </Col>
         </Row>
       </div>
     );
