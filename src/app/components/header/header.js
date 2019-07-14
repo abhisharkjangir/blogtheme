@@ -69,7 +69,7 @@ class Header extends React.PureComponent {
         <Container>
           <Row>
             {this.renderLogo()}
-            {this.renderNavigation()}
+            {/* {this.renderNavigation()} */}
             {/* {this.renderTypehead()} */}
           </Row>
         </Container>

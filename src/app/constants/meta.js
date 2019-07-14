@@ -6,7 +6,7 @@ export default {
     description: "Bloging Website",
     image: LOGO,
     twitter: "",
-    sep: " : ",
+    sep: " | ",
     siteURL: "",
     keywords: "",
     facebookAppId: "XXXXXXXXX",
@@ -19,6 +19,7 @@ export default {
     title: "Home",
     description: "Blog Theme"
   },
+  blogDetail: {},
   notfound: {
     id: "notfound",
     title: "Oops! 404",

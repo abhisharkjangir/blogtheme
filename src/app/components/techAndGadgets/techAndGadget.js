@@ -36,7 +36,11 @@ class TechAndGadgets extends React.PureComponent {
         <BorderHeading text="Tech & Gadgets" />
         <SlickSlider merge={{ ...slickSetting }}>
           {trendingBlogList &&
-            trendingBlogList.map(blog => <div className='p-1'><FullImgBlogCard categories={categoryList} blog={blog} /></div>)}
+            trendingBlogList.map(blog => (
+              <div key={blog._id} className="p-1">
+                <FullImgBlogCard categories={categoryList} blog={blog} />
+              </div>
+            ))}
         </SlickSlider>
       </div>
     );

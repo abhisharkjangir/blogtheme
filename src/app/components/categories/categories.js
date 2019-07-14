@@ -31,7 +31,7 @@ class Categories extends React.PureComponent {
         <BorderHeading heading="h3" text="Categories" />
         <ul>
           {categoryList.map(cat => (
-            <Link to={getCategoryUrl(cat)}>
+            <Link key={cat._id} to={getCategoryUrl(cat)}>
               <li>{cat.name}</li>
             </Link>
           ))}

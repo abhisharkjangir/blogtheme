@@ -32,7 +32,7 @@ class Home extends React.PureComponent {
                 <Subscribe />
               </Col>
               <Col lg={12}>
-              <TopCategories />
+                <TopCategories />
                 <TechAndGadgets
                   slickSetting={{
                     dots: false,
