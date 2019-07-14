@@ -9,7 +9,8 @@ import SmallBlogCard from "../smallBlogCard";
 import {
   getCategoryDataFromBlog,
   getBlogUrl,
-  getCategoryUrl
+  getCategoryUrl,
+  getTimeString
 } from "../../utils/common";
 import Image from "../common/Image/image";
 
@@ -45,7 +46,8 @@ class SliderGrid extends React.PureComponent {
               className="mr-3"
               alt={blog.author}
             />
-            {blog.author}, 5 Months ago
+            <span className="mr-1 pr-2 border-right">{blog.author} </span>
+            <span className=" ml-1">{getTimeString(blog.updatedDate)}</span>
             <span className="mr-1 ml-2 border-right" />
             <Icon name="bubble" className="mr-1 ml-2" /> 96
             <span className="mr-1 ml-2 border-right" />
@@ -81,10 +83,12 @@ class SliderGrid extends React.PureComponent {
           </Col>
           <Col className="p-0" lg={12}>
             <SlickSlider>
-            {tiles &&
-              tiles
-                .slice(0, 4)
-                .map(tile => <div key={tile} className="small-skeleton-card" />)}
+              {tiles &&
+                tiles
+                  .slice(0, 4)
+                  .map(tile => (
+                    <div key={tile} className="small-skeleton-card" />
+                  ))}
             </SlickSlider>
           </Col>
         </Row>
@@ -102,7 +106,12 @@ class SliderGrid extends React.PureComponent {
             trendingBlogList
               .slice(5, length)
               .map(blog => (
-                <SmallBlogCard blog={blog} showCategory categories={categoryList} />
+                <SmallBlogCard
+                  key={blog._id}
+                  blog={blog}
+                  showCategory
+                  categories={categoryList}
+                />
               ))}
         </SlickSlider>
       </div>

@@ -1,4 +1,5 @@
 import QueryString from "query-string";
+import moment from "moment";
 
 // A nice helper to tell us if we're on the server
 export const isServer = !(
@@ -70,7 +71,7 @@ export const cleanObject = object => {
 
 // Get Category Data from Blog
 export const getCategoryDataFromBlog = (categories, blog) => {
-  if (blog && categories) {
+  if (blog && blog.category && categories) {
     const blogFirstCategory = blog.category[0];
     const matchedCategories = categories.filter(
       cat => cat._id.toString() === blogFirstCategory
@@ -86,10 +87,10 @@ export const getCategoryDataFromBlog = (categories, blog) => {
 // Get Blog URL
 export const getBlogUrl = blog => {
   if (blog) {
-    return `blog/${blog.title
+    return `/blog/${blog.title
       .toLowerCase()
       .split(" ")
-      .join("-")}/${blog._id}`;
+      .join("-").replace(/[&/\\#,+()$~%.'":*?<>{}]/g, '')}/${blog._id}`;
   }
   return "";
 };
@@ -97,7 +98,7 @@ export const getBlogUrl = blog => {
 // Get Category URL
 export const getCategoryUrl = category => {
   if (category && category.name) {
-    return `category/${category.name
+    return `/category/${category.name
       .toLowerCase()
       .split(" ")
       .join("-")}/${category._id}`;
@@ -108,7 +109,18 @@ export const getCategoryUrl = category => {
 // Get Time String
 export const getTimeString = date => {
   if (date) {
-    return "Calculate Date";
+    return moment(date).format("Do MMM, YYYY");
   }
   return "Time is not Available";
+};
+
+// Get Blog Short Description (120 char)
+export const extractShortDescription = (htmlString, length = 120) => {
+  if (htmlString) {
+    const p = document.createElement("p");
+    p.innerHTML = htmlString;
+    const description = p.textContent || p.innerText;
+    return description.slice(0, length);
+  }
+  return "";
 };

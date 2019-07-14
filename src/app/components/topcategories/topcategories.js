@@ -48,19 +48,26 @@ class TopCategories extends React.PureComponent {
         <BorderHeading text="Top Categories" />
         <Row className="m-0 p-0">
           {trendingBlogList.slice(0, 3).map(blog => (
-            <Col className="p-0" lg={4}>
+            <Col key={blog._id} className="p-0" lg={4}>
               <LargeBlogCard blog={blog} showDescription />
             </Col>
           ))}
           {trendingBlogList.slice(4, 10).map(blog => (
-            <Col className="p-0" lg={4}>
+            <Col key={blog._id} className="p-0" lg={4}>
               <SmallBlogCard blog={blog} showDetail categories={categoryList} />
             </Col>
           ))}
           <Col lg={12} className="p-0">
-            <SlickSlider merge={{ dots: false, slidesToShow: 1, slidesToScroll: 1}}>
+            <SlickSlider
+              merge={{ dots: false, slidesToShow: 1, slidesToScroll: 1 }}
+            >
               {trendingBlogList.slice(10, trendingBlogList.length).map(blog => (
-                <FullImgBlogCard blog={blog} categories={categoryList} showAuthor/>
+                <FullImgBlogCard
+                  key={blog._id}
+                  blog={blog}
+                  categories={categoryList}
+                  showAuthor
+                />
               ))}
             </SlickSlider>
           </Col>
