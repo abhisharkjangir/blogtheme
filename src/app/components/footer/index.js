@@ -9,12 +9,12 @@ class Footer extends Component {
     return (
       <footer className={sidebar ? "footer" : "footer-no-sidebar"}>
         <Container>
-          Copyright © {year}{" "}
+          Copyright © {year}
           <span className="float-right">
-            Made with{" "}
+            Made with
             <span role="img" aria-label="heart">
               💖
-            </span>{" "}
+            </span>
             by <a href="http://abhijangir.me">Abhishar Jangir.</a>
           </span>
         </Container>

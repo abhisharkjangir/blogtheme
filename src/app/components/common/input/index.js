@@ -10,10 +10,11 @@ const Input = ({
   onChange,
   label,
   disabled,
-  className
+  className,
+  placeholder,
 }) => (
   <Wrapper className='mb-3'>
-    <label htmlFor={id}>{label}</label>
+    {label && <label htmlFor={id}>{label}</label>}
     <input
       id={id}
       type={type}
@@ -22,6 +23,7 @@ const Input = ({
       onChange={onChange}
       disabled={disabled}
       className={className}
+      placeholder={placeholder}
     />
   </Wrapper>
 );

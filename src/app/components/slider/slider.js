@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const defaultSetting = {
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -42,8 +42,7 @@ const SlickSlider = ({ settings, children, merge }) => {
   const settting = settings || defaultSetting;
   return (
     <Slider {...settting} {...merge}>
-      {" "}
-      {children}{" "}
+      {children}
     </Slider>
   );
 };

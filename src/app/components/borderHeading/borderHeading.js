@@ -1,9 +1,10 @@
 import React from "react";
 import "./borderHeading.scss";
-const BorderHeading = ({ text }) => {
+const BorderHeading = ({ text, heading }) => {
+  const Heading = heading || 'h2';
   return (
     <div className="heading-wrapper">
-      <h2 className="heading">{text}</h2>
+      <Heading >{text}</Heading>
     </div>
   );
 };

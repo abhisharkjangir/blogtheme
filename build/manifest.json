@@ -1,5 +1,5 @@
 {
-  "short_name": "imabhi",
+  "short_name": "blog",
   "name": ".",
   "description": "2.0",
   "icons": [
@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "http://abhijangir.me/",
+  "start_url": "https://blog.abhijangir.me/",
   "display": "fullscreen",
   "theme_color": "#ff005a",
   "background_color": "#ffffff"
