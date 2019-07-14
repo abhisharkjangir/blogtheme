@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.scss";
-
 import { Container, Col, Row } from "../layout";
-import logo from "../../assets/imgs/logo.png";
 import Typehead from "../typehead/typehead";
 import Image from "../common/Image/image";
 
@@ -34,7 +32,9 @@ class Header extends React.PureComponent {
   renderLogo = () => {
     return (
       <Col lg={2}>
-        <Image src={logo} width="105px" alt="logo" />
+        <Link to='/'>
+          <Image src={'https://s3.ap-south-1.amazonaws.com/imabhi.in/logo.png'} className='mt-2' width="60px" alt="logo" />
+        </Link>
       </Col>
     );
   };

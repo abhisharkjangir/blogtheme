@@ -5,6 +5,7 @@ import {
   fetchCategory,
   fetchTrendingBlogs
 } from "../containers/app/appActions";
+import { fetchTodaySpotlight } from "../containers/todaysSpotlight/todaysSpotlightActions";
 
 const Loading = props => {
   if (props.error) {
@@ -14,7 +15,7 @@ const Loading = props => {
       </div>
     );
   } else if (props.pastDelay) {
-    return <div>Loading...</div>;
+    return <div>.</div>;
   } else {
     return null;
   }
@@ -38,7 +39,7 @@ export const Routes = [
   {
     path: "/",
     component: Home,
-    fetchRouteData: [fetchCategory, fetchTrendingBlogs],
+    fetchRouteData: [fetchCategory, fetchTrendingBlogs, fetchTodaySpotlight],
     exact: true
   },
   {

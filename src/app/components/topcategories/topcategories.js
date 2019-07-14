@@ -14,14 +14,14 @@ class TopCategories extends React.PureComponent {
       <React.Fragment>
         <BorderHeading text="Top Categories" />
         <Row>
-          {cards.slice(0, 2).map(blog => (
-            <Col key={blog} className="p-0" lg={6}>
+          {cards.slice(0, 3).map(blog => (
+            <Col key={blog} className="p-0" lg={4}>
               <div className="large-skeleton-card" />
             </Col>
           ))}
 
           {cards.slice(0, 6).map(blog => (
-            <Col key={blog} className="p-0" lg={6}>
+            <Col key={blog} className="p-0" lg={4}>
               <div className="small-skeleton-card" />
             </Col>
           ))}
@@ -47,19 +47,19 @@ class TopCategories extends React.PureComponent {
       <div className="top-categories">
         <BorderHeading text="Top Categories" />
         <Row className="m-0 p-0">
-          {trendingBlogList.slice(0, 2).map(blog => (
-            <Col className="p-0" lg={6}>
+          {trendingBlogList.slice(0, 3).map(blog => (
+            <Col className="p-0" lg={4}>
               <LargeBlogCard blog={blog} showDescription />
             </Col>
           ))}
-          {trendingBlogList.slice(3, 7).map(blog => (
-            <Col className="p-0" lg={6}>
+          {trendingBlogList.slice(4, 10).map(blog => (
+            <Col className="p-0" lg={4}>
               <SmallBlogCard blog={blog} showDetail categories={categoryList} />
             </Col>
           ))}
           <Col lg={12} className="p-0">
             <SlickSlider merge={{ dots: false, slidesToShow: 1, slidesToScroll: 1}}>
-              {trendingBlogList.slice(8, trendingBlogList.length).map(blog => (
+              {trendingBlogList.slice(10, trendingBlogList.length).map(blog => (
                 <FullImgBlogCard blog={blog} categories={categoryList} showAuthor/>
               ))}
             </SlickSlider>

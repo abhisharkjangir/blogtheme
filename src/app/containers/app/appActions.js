@@ -25,7 +25,7 @@ export const fetchCategoryError = data => ({
   data
 });
 
-// TRENDING CATEGORY
+// TRENDING BLOGS
 export const fetchTrendingBlogs = () => ({ type: FETCH_TRENDING_BLOGS });
 export const fetchingTrendingBlogs = () => ({ type: FETCHING_TRENDING_BLOGS });
 export const fetchTrendingBlogsSuccess = data => ({

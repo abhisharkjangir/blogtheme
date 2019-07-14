@@ -8,6 +8,17 @@ import Image from "../common/Image/image";
 import Icon from "../icon/icon";
 
 class TodaysSpotlight extends React.PureComponent {
+  componentDidMount() {
+    const {
+      todaysSpotlightIsFetching,
+      todaysSpotlightList,
+      fetchTodaysSpotlight
+    } = this.props;
+    if (!todaysSpotlightIsFetching && todaysSpotlightList.length === 0) {
+      fetchTodaysSpotlight();
+    }
+  }
+
   renderSkeleton = () => {
     const cards = [1, 2, 3, 4];
     return (
@@ -27,18 +38,18 @@ class TodaysSpotlight extends React.PureComponent {
 
   render() {
     const {
-      trendingBlogsIsFetching,
-      trendingBlogList,
+      todaysSpotlightIsFetching,
+      todaysSpotlightList,
       slickSetting
     } = this.props;
-    if (trendingBlogsIsFetching && trendingBlogList.length === 0)
+    if (todaysSpotlightIsFetching && todaysSpotlightList.length === 0)
       return this.renderSkeleton();
     return (
       <div className="todays-spotlight">
         <BorderHeading text="Today's Spotlight" />
         <SlickSlider merge={{ ...slickSetting }}>
-          {trendingBlogList &&
-            trendingBlogList.map(blog => (
+          {todaysSpotlightList &&
+            todaysSpotlightList.map(blog => (
               <div key={blog._id} className="medium-blog-card">
                 <Image src={blog.imageSrc} alt={blog.title} />
                 <Link to={getBlogUrl(blog)} className="title">

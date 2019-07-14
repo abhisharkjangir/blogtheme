@@ -38,7 +38,7 @@ function* fetchTrendingBlogs() {
     } = yield call(ApiService, {
       method: "POST",
       url: "blogs",
-      data: { isTrending: "1", offset: 0, limit: 10 }
+      data: { isTrending: "1", offset: 0, limit: 20 }
     });
 
     if (success) {

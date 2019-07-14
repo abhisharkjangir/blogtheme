@@ -1,25 +1,22 @@
 import { connect } from "react-redux";
-import TodaysSpotlight from "../../components/todaysSpotlight";
 import { createStructuredSelector } from "reselect";
+import TodaysSpotlight from "../../components/todaysSpotlight";
 import {
-  selectCategoryIsFetching,
-  selectCategoryList,
-  selectCategoryError,
-  selectTrendingBlogsIsFetching,
-  selectTrendingBlogsList,
-  selectTrendingBlogsError
-} from "../app/appSelectors";
+  selectTodaysSpolightBlogsIsFetching,
+  selectTodaysSpolightBlogsList,
+  selectTodaysSpolightBlogsError
+} from "./todaysSpotlightSelectors";
+import { fetchTodaySpotlight } from "./todaysSpotlightActions";
 
 const mapStateToProps = createStructuredSelector({
-  categoryIsFetching: selectCategoryIsFetching,
-  categoryList: selectCategoryList,
-  categoryError: selectCategoryError,
-  trendingBlogsIsFetching: selectTrendingBlogsIsFetching,
-  trendingBlogList: selectTrendingBlogsList,
-  trendingBlogsError: selectTrendingBlogsError
+  todaysSpotlightIsFetching: selectTodaysSpolightBlogsIsFetching,
+  todaysSpotlightList: selectTodaysSpolightBlogsList,
+  todaysSpotlightError: selectTodaysSpolightBlogsError
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  fetchTodaysSpotlight: () => dispatch(fetchTodaySpotlight())
+});
 
 export default connect(
   mapStateToProps,

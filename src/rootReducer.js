@@ -11,18 +11,18 @@ import AppReducer, {
   trendingBlogsReducer
 } from "./app/containers/app/appReducer";
 
-// Home Reducer
-// import { HOME_STATE_KEY } from "./app/containers/pages/home/homeConstants";
-// import HomeReducer from "./app/containers/pages/home/homeReducer";
-
 // Loader Reducer
 import { LOADER_STATE_KEY } from "./app/components/common/loader/loaderConstants";
 import loaderReducer from "./app/components/common/loader/loaderReducer";
 
+// Today's Spotlight
+import { TODAYS_SPOTLIGHT_STATE_KEY } from "./app/containers/todaysSpotlight/todaysSpotlightConstants";
+import todaysSpotlightReducer from "./app/containers/todaysSpotlight/todaysSpotlightReducer";
+
 export default combineReducers({
   [APP_STATE_KEY]: AppReducer,
   [LOADER_STATE_KEY]: loaderReducer,
-  // [HOME_STATE_KEY]: HomeReducer,
   [CATEGORY_STATE_KEY]: categoryReducer,
-  [TRENDING_BLOGS_STATE_KEY]: trendingBlogsReducer
+  [TRENDING_BLOGS_STATE_KEY]: trendingBlogsReducer,
+  [TODAYS_SPOTLIGHT_STATE_KEY]: todaysSpotlightReducer
 });

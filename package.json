@@ -9,9 +9,9 @@
   "author": {
     "name": "Abhishar Jangir",
     "email": "abhisharjangir@ymail.com",
-    "url": "http://abhijangir.me/"
+    "url": "https://abhijangir.me/"
   },
-  "homepage": "http://blog.abhijangir.me",
+  "homepage": "https://blog.abhijangir.me",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
