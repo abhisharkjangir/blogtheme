@@ -30,7 +30,7 @@
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.11",
     "md5-file": "^4.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "morgan": "^1.9.1",
     "query-string": "^6.4.2",
     "react": "^16.5.2",
